@@ -59,7 +59,25 @@
       width: 200px;
       height: auto;
       display: block;
-      border: white solid 7px ;
+      border: white solid 7px;
+    }
+
+    .embed-container {
+      position: relative;
+      padding-bottom: 75%;
+      height: 0;
+      overflow: hidden;
+      max-width: 100%;
+    }
+
+    .embed-container iframe,
+    .embed-container object,
+    .embed-container embed {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
     }
   </style>
 
@@ -101,7 +119,7 @@
       before retiring. Her tenure was not just long but historic, making her the bank's longest-serving employee, a
       badge of honor that reflected her unwavering commitment and dedication.</p>
 
-      <!--
+    <!--
     <a href="photos/Betty-Collins-21.webp" data-lightbox="gallery"
       data-alt="Betty Collins meeting with her former colleagues from First Guaranty Bank"
       data-title="Betty Collins meeting with her former colleagues from First Guaranty Bank for their annual lunch.">
@@ -206,10 +224,10 @@
         href="https://edgewoodavenuecc.org/">Edgewood Avenue Christian Church</a> in memory of Betty Collins is warmly
       welcomed.</p>
 
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13777.533442914193!2d-81.7167017!3d30.3116117!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e5b9755679e8e7%3A0xb32c81ec9f2c4da0!2sEdgewood%20Avenue%20Christian%20Church!5e0!3m2!1sen!2sus!4v1707973501617!5m2!1sen!2sus"
-      width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div class='embed-container'><iframe
+        src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13777.533442914193!2d-81.7167017!3d30.3116117!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e5b9755679e8e7%3A0xb32c81ec9f2c4da0!2sEdgewood%20Avenue%20Christian%20Church!5e0!3m2!1sen!2sus!4v1707973501617!5m2!1sen!2sus'
+        width='800' height='600' style='border:0;' allowfullscreen='' loading='lazy'
+        referrerpolicy='no-referrer-when-downgrade'></iframe></div>
 
     <div class="flex justify-around mv4">
       <!-- Share on Facebook -->
@@ -254,7 +272,7 @@
       const photos = document.querySelectorAll('.photo-collage a');
       let lastMouseOverTime = new Date().getTime(); // Initialize with the current time
       let autoPromotionActive = false; // Flag to control auto-promotion
-    
+
       // Function to reset all photos to their default state
       function resetPhotos() {
         photos.forEach(photo => {
@@ -262,7 +280,7 @@
           photo.style.transform = photo.style.transform.replace(' scale(1.25)', ''); // Ensure scale is reset if it was enlarged
         });
       }
-    
+
       photos.forEach((photo, index) => {
         // Apply initial random transformation
         const collageWidth = document.querySelector('.photo-collage').offsetWidth;
@@ -272,7 +290,7 @@
         const yOffset = (collageHeight * 0.05) + Math.random() * (collageHeight * 0.9 - 200);
         photo.style.transform = `translate(${xOffset}px, ${yOffset}px) rotate(${rotation}deg) scale(1)`;
         photo.style.transition = 'transform 0.5s ease, z-index 0s';
-    
+
         // Mouseover event to scale the photo up and bring it to the front
         photo.addEventListener('mouseover', () => {
           lastMouseOverTime = new Date().getTime(); // Update the last mouseover time
@@ -281,7 +299,7 @@
           photo.style.transform = `translate(${xOffset}px, ${yOffset}px) rotate(${rotation}deg) scale(1.25)`; // Enlarge photo
           autoPromotionActive = false; // Disable auto-promotion while interacting
         });
-    
+
         // Mouseout event to reset the photo's scale
         photo.addEventListener('mouseout', () => {
           photo.style.transform = `translate(${xOffset}px, ${yOffset}px) rotate(${rotation}deg) scale(1)`; // Reset scale
@@ -293,7 +311,7 @@
           }, 500);
         });
       });
-    
+
       // Function to promote a random photo
       function promoteRandomPhoto() {
         if (new Date().getTime() - lastMouseOverTime >= 4000) { // 4 seconds of inactivity
@@ -314,11 +332,11 @@
           }, 3000); // Keep promoted for 2 seconds before scaling down
         }
       }
-    
+
       setInterval(promoteRandomPhoto, 3000); // Attempt to promote a photo every 3 seconds
     });
-    </script>
-    
+  </script>
+
 
 </body>
 
