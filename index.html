@@ -7,6 +7,8 @@
   <title>Betty Collins Memorial</title>
   <link href="https://unpkg.com/tachyons/css/tachyons.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <script type="text/javascript" src="/lightbox2/src/js/lightbox.js"></script>
+  <link rel="stylesheet" href="/lightbox2/src/css/lightbox.css" />
   <!-- Font Awesome CDN for the Facebook Icon -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <style>
@@ -48,12 +50,30 @@
       margin-right: 8px;
     }
   </style>
+
+  <!-- Meta tags for social media -->
+  <meta property="og:title" content="Betty Collins Memorial" />
+  <meta property="og:description" content="In Loving Memory of Betty Collins" />
+  <meta property="og:image" content="https://bettycollins.elegies.online/photos/Betty-Collins-24-cropped.webp" />
+  <meta property="og:url" content="https://bettycollins.elegies.online" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Betty Collins Memorial" />
+  <meta name="twitter:description" content="In Loving Memory of Betty Collins" />
+  <meta name="twitter:image" content="https://bettycollins.elegies.online/photos/Betty-Collins-24-cropped.webp" />
 </head>
 
 <body class="tachyons f4">
   <div class="container">
     <h1 class="f2 lh-title">In Loving Memory of Betty Collins</h1>
-    <p>Betty Collins passed away peacefully on February 9, 2024, in Jacksonville, Florida, just days before turning 89.
+    <a href="/photos/Betty-Collins-24.webp" data-lightbox="betty-collins"
+      data-title="Betty Collins and Bill O'Byrne sitting on the couch holding hands">
+      <img src="/photos/Betty-Collins-24-cropped.webp"
+        alt="Betty Collins and Bill O'Byrne sitting on the couch holding hands" class="db center mb4"
+        style="max-width: 100%; height: auto;">
+    </a>
+
+    <p>Betty Lynn Collins, née Hollingsworth, passed away peacefully on February 9, 2024, in Jacksonville, Florida, just
+      days before turning 89.
       Born in Jacksonville on February 12, 1935, she spent the majority of her life there. While most of her life was
       spent in Jacksonville, she also lived briefly in Palatka, Orlando, and Brunswick, Georgia. Despite these moves,
       Jacksonville was always her true home.</p>
@@ -99,11 +119,16 @@
 
     <p>A memorial service will be held in her honor on Friday, February 23, 2024, at 11 a.m. at Edgewood Avenue
       Christian Church, where Betty's life will be celebrated and remembered.</p>
-      
-    <p>For those who prefer an alternative to sending flowers, a donation to <a href="https://edgewoodavenuecc.org/">Edgewood Avenue Christian Church</a> in memory of Betty Collins is warmly welcomed.</p>
-    
-    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13777.533442914193!2d-81.7167017!3d30.3116117!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e5b9755679e8e7%3A0xb32c81ec9f2c4da0!2sEdgewood%20Avenue%20Christian%20Church!5e0!3m2!1sen!2sus!4v1707973501617!5m2!1sen!2sus" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    
+
+    <p>For those who prefer an alternative to sending flowers, a donation to <a
+        href="https://edgewoodavenuecc.org/">Edgewood Avenue Christian Church</a> in memory of Betty Collins is warmly
+      welcomed.</p>
+
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13777.533442914193!2d-81.7167017!3d30.3116117!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e5b9755679e8e7%3A0xb32c81ec9f2c4da0!2sEdgewood%20Avenue%20Christian%20Church!5e0!3m2!1sen!2sus!4v1707973501617!5m2!1sen!2sus"
+      width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+
     <div class="flex justify-around mv4">
       <!-- Share on Facebook -->
       <a href="#" class="link dim ph3 pv2 mb2 dib white bg-blue" target="_blank" id="shareOnFacebook"><i
@@ -119,25 +144,25 @@
     </div>
   </div>
 
-<script>
-  function setShareLinks() {
-    const pageTitle = encodeURIComponent(document.title);
-    const pageURL = encodeURIComponent(window.location.href);
-    const emailBody = encodeURIComponent("Betty Collins passed away peacefully on February 9, 2024, in Jacksonville, Florida, just days before turning 89." +
-      "\n\n" +
-      "A memorial service will be held in her honor on Friday, February 23, 2024, at 11 a.m. at Edgewood Avenue Christian Church, where Betty's life will be celebrated and remembered." +
-      "\n\n" +
-      "For more information visit " + pageURL);
+  <script>
+    function setShareLinks() {
+      const pageTitle = encodeURIComponent(document.title);
+      const pageURL = encodeURIComponent(window.location.href);
+      const emailBody = encodeURIComponent("Betty Collins passed away peacefully on February 9, 2024, in Jacksonville, Florida, just days before turning 89." +
+        "\n\n" +
+        "A memorial service will be held in her honor on Friday, February 23, 2024, at 11 a.m. at Edgewood Avenue Christian Church, where Betty's life will be celebrated and remembered." +
+        "\n\n" +
+        "For more information visit " + pageURL);
 
-    document.getElementById('shareOnFacebook').href = `https://www.facebook.com/sharer/sharer.php?u=${pageURL}`;
-    document.getElementById('shareOnTwitter').href = `https://twitter.com/intent/tweet?url=${pageURL}&text=${pageTitle}`;
-    document.getElementById('shareByEmail').href = `mailto:?subject=${pageTitle}&body=${emailBody}`;
-  }
+      document.getElementById('shareOnFacebook').href = `https://www.facebook.com/sharer/sharer.php?u=${pageURL}`;
+      document.getElementById('shareOnTwitter').href = `https://twitter.com/intent/tweet?url=${pageURL}&text=${pageTitle}`;
+      document.getElementById('shareByEmail').href = `mailto:?subject=${pageTitle}&body=${emailBody}`;
+    }
 
-  setShareLinks();
-</script>
+    setShareLinks();
+  </script>
 
-  
+
 </body>
 
 </html>
