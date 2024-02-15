@@ -1,32 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Betty Collins Memorial</title>
-  <!-- Tachyons CSS -->
   <link href="https://unpkg.com/tachyons/css/tachyons.min.css" rel="stylesheet">
-  <!-- Google Fonts for Lato -->
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome CDN for the Facebook Icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <style>
     body {
       font-family: 'Lato', sans-serif;
       padding: 20px;
       line-height: 1.6;
     }
+
     .container {
       max-width: 800px;
       margin: auto;
     }
+
     h1 {
       text-align: center;
     }
+
     p {
       margin-bottom: 20px;
     }
+
+    .share-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: max-content;
+      margin: 20px auto;
+      padding: 10px 15px;
+      background-color: #4267B2;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    .share-btn i {
+      margin-right: 8px;
+    }
   </style>
 </head>
-<body class="tachyons">
+
+<body class="tachyons f4">
   <div class="container">
     <h1 class="f2 lh-title">In Loving Memory of Betty Collins</h1>
     <p>Betty Collins passed away peacefully on February 9, 2024, in Jacksonville, Florida, just days before turning 89.
@@ -74,9 +98,46 @@
       Mike and Larry Hollingsworth (Cindy); and numerous nieces and nephews.</p>
 
     <p>A memorial service will be held in her honor on Friday, February 23, 2024, at 11 a.m. at Edgewood Avenue
-      Christian Church, where Betty's life will be celebrated and remembered. For those who prefer an alternative to
-      sending flowers, a donation to Edgewood Avenue Christian Church in memory of Betty Collins is warmly welcomed.</p>
+      Christian Church, where Betty's life will be celebrated and remembered.</p>
+      
+    <p>For those who prefer an alternative to sending flowers, a donation to <a href="https://edgewoodavenuecc.org/">Edgewood Avenue Christian Church</a> in memory of Betty Collins is warmly welcomed.</p>
+    
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13777.533442914193!2d-81.7167017!3d30.3116117!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e5b9755679e8e7%3A0xb32c81ec9f2c4da0!2sEdgewood%20Avenue%20Christian%20Church!5e0!3m2!1sen!2sus!4v1707973501617!5m2!1sen!2sus" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    
+    <div class="flex justify-around mv4">
+      <!-- Share on Facebook -->
+      <a href="#" class="link dim ph3 pv2 mb2 dib white bg-blue" target="_blank" id="shareOnFacebook"><i
+          class="fa-brands fa-square-facebook pr2"></i> Share on Facebook</a>
+
+      <!-- Share on Twitter -->
+      <a href="#" class="link dim ph3 pv2 mb2 dib white" style="background-color: black;" target="_blank"
+        id="shareOnTwitter"><i class="fa-brands fa-square-x-twitter"></i> Share on Twitter</a>
+
+      <!-- Share by Email -->
+      <a href="#" class="link dim ph3 pv2 mb2 dib white bg-purple" id="shareByEmail" target="_blank"><i
+          class="fa-solid fa-envelope pr2"></i> Share by Email</a>
+    </div>
   </div>
+
+<script>
+  function setShareLinks() {
+    const pageTitle = encodeURIComponent(document.title);
+    const pageURL = encodeURIComponent(window.location.href);
+    const emailBody = encodeURIComponent("Betty Collins passed away peacefully on February 9, 2024, in Jacksonville, Florida, just days before turning 89." +
+      "\n\n" +
+      "A memorial service will be held in her honor on Friday, February 23, 2024, at 11 a.m. at Edgewood Avenue Christian Church, where Betty's life will be celebrated and remembered." +
+      "\n\n" +
+      "For more information visit " + pageURL);
+
+    document.getElementById('shareOnFacebook').href = `https://www.facebook.com/sharer/sharer.php?u=${pageURL}`;
+    document.getElementById('shareOnTwitter').href = `https://twitter.com/intent/tweet?url=${pageURL}&text=${pageTitle}`;
+    document.getElementById('shareByEmail').href = `mailto:?subject=${pageTitle}&body=${emailBody}`;
+  }
+
+  setShareLinks();
+</script>
+
+  
 </body>
 
 </html>
