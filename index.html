@@ -119,19 +119,16 @@
       before retiring. Her tenure was not just long but historic, making her the bank's longest-serving employee, a
       badge of honor that reflected her unwavering commitment and dedication.</p>
 
-    <!--
-    <a href="photos/Betty-Collins-21.webp" data-lightbox="gallery"
-      data-alt="Betty Collins meeting with her former colleagues from First Guaranty Bank"
-      data-title="Betty Collins meeting with her former colleagues from First Guaranty Bank for their annual lunch.">
-      <img src="photos/Betty-Collins-21.webp"
-        alt="Betty Collins meeting with her former colleagues from First Guaranty Bank"
-        class="db center mb4 fr w5-ns ml3-ns" style="max-width: 100%; height: auto;">
-    </a>
-  -->
-
     <p>Even after retirement, Betty maintained a strong connection with her former colleagues, gathering annually to
       reminisce about their shared experiences, showcasing her loyalty and the deep bonds formed throughout her career.
     </p>
+    <a href="photos/Betty-Collins-48.webp" data-lightbox="gallery"
+      data-alt="Betty Collins meeting with her former colleagues from First Guaranty Bank"
+      data-title="Betty Collins meeting with her former colleagues from First Guaranty Bank for their annual lunch.">
+      <img src="photos/Betty-Collins-48.webp"
+        alt="Betty Collins meeting with her former colleagues from First Guaranty Bank"
+        class="db center mb4 fr w5-ns ml3-ns" style="max-width: 100%; height: auto;">
+    </a>
 
     <p>Betty's life was marked by her trailblazing spirit as a career woman during a time when it was not widely
       accepted. Despite the controversy surrounding women in the workforce at the time, Betty prioritized her
@@ -242,7 +239,26 @@
       <a href="#" class="link dim ph3 pv2 mb2 dib white bg-purple" id="shareByEmail" target="_blank"><i
           class="fa-solid fa-envelope pr2"></i> Share by Email</a>
     </div>
+
+    <iframe id="embed-iframe" style="width:100%;border:none;"
+      src="https://forms.jaxplays.org/betty-collins-guest-book/"></iframe>
+
   </div>
+  <script type='text/javascript'>
+    // Listen for messages sent from the iFrame
+    var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
+    var eventer = window[eventMethod];
+    var messageEvent = eventMethod == "attachEvent" ? "onmessage" : "message";
+
+    eventer(messageEvent, function (e) {
+      // If the message is a resize frame request
+      if (e.data.indexOf('resize::') != -1) {
+        var height = e.data.replace('resize::', '');
+        document.getElementById('embed-iframe').style.height = height + 'px';
+      }
+    }, false);
+  </script>
+
   <script>
     lightbox.option({
       'alwaysShowNavOnTouchDevices': true,
@@ -268,6 +284,8 @@
   </script>
 
   <script>
+    // Tossed pile of photos script
+
     document.addEventListener('DOMContentLoaded', function () {
       const photos = document.querySelectorAll('.photo-collage a');
       let lastMouseOverTime = new Date().getTime(); // Initialize with the current time
@@ -336,7 +354,24 @@
       setInterval(promoteRandomPhoto, 3000); // Attempt to promote a photo every 3 seconds
     });
   </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Select all img elements not inside .photo-collage
+      const outsidePhotos = document.querySelectorAll('img:not(.photo-collage img)');
 
+      outsidePhotos.forEach(photo => {
+        photo.style.transition = 'transform 0.5s ease'; // Set transition for smooth scaling
+
+        photo.addEventListener('mouseover', () => {
+          photo.style.transform = 'scale(1.05)'; // Scale up on hover
+        });
+
+        photo.addEventListener('mouseout', () => {
+          photo.style.transform = 'scale(1)'; // Reset scale on mouseout
+        });
+      });
+    });
+  </script>
 
 </body>
 
