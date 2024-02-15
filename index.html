@@ -17,16 +17,12 @@
       padding: 20px;
       line-height: 1.6;
     }
+
     .container {
       max-width: 800px;
       margin: auto;
     }
-    h1 {
-      text-align: center;
-    }
-    p {
-      margin-bottom: 20px;
-    }
+
     .share-btn {
       display: flex;
       align-items: center;
@@ -41,25 +37,29 @@
       border-radius: 5px;
       font-size: 16px;
     }
+
     .photo-collage {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-bottom: 20px; /* Adjust space between the collage and the next text */
+      margin-bottom: 40px;
+      /* Increased space */
+      position: relative;
+      width: 100%;
+      height: 300px;
+      /* Adjust based on your layout needs */
     }
+
     .photo-collage a {
       margin: 5px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      transform: rotate(-2deg);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       transition: transform 0.2s ease;
+      display: inline-block;
+      position: absolute;
     }
-    .photo-collage a:hover {
-      transform: rotate(2deg);
-    }
+
     .photo-collage img {
-      width: 150px; /* Adjust based on your preference */
+      width: 200px;
       height: auto;
       display: block;
+      border: white solid 7px ;
     }
   </style>
 
@@ -76,7 +76,7 @@
 
 <body class="tachyons f4">
   <div class="container">
-    <h1 class="f2 lh-title">In Loving Memory of Betty Collins</h1>
+    <h1 class="f2 tc lh-title">In Loving Memory of Betty Collins</h1>
     <a href="photos/Betty-Collins-24.webp" data-lightbox="gallery"
       data-alt="Betty Collins and Bill O'Byrne sitting on the couch holding hands"
       data-title="Betty Collins and Bill O'Byrne sitting on the couch holding hands">
@@ -101,6 +101,7 @@
       before retiring. Her tenure was not just long but historic, making her the bank's longest-serving employee, a
       badge of honor that reflected her unwavering commitment and dedication.</p>
 
+      <!--
     <a href="photos/Betty-Collins-21.webp" data-lightbox="gallery"
       data-alt="Betty Collins meeting with her former colleagues from First Guaranty Bank"
       data-title="Betty Collins meeting with her former colleagues from First Guaranty Bank for their annual lunch.">
@@ -108,6 +109,7 @@
         alt="Betty Collins meeting with her former colleagues from First Guaranty Bank"
         class="db center mb4 fr w5-ns ml3-ns" style="max-width: 100%; height: auto;">
     </a>
+  -->
 
     <p>Even after retirement, Betty maintained a strong connection with her former colleagues, gathering annually to
       reminisce about their shared experiences, showcasing her loyalty and the deep bonds formed throughout her career.
@@ -131,21 +133,59 @@
     <p>A gifted conversationalist, Betty made friends wherever she went, particularly at the Edgewood Condominiums and
       Silver Treasures at Lane Ave.</p>
 
-      <div class="photo-collage">
-        <a href="photos/Betty-Collins-08.webp" data-lightbox="gallery" data-title="Bill O'Bryne, Betty Collins, Linda Alvarado at Edgewood Avenue Christian Church"><img src="photos/Betty-Collins-08.webp" alt="Photo of Bill O'Bryne, Betty Collins, Linda Alvarado at Edgewood Avenue Christian Church"></a>
-        <a href="photos/Betty-Collins-09.webp" data-lightbox="gallery" data-title="David Christian, Tina Christian, Bill O'Bryne and Betty Collins at Edgewood Avenue Christian Church"><img src="photos/Betty-Collins-09.webp" alt="Photo of David Christian, Tina Christian, Bill O'Bryne and Betty Collins at Edgewood Avenue Christian Church"></a>
-        <a href="photos/Betty-Collins-10.webp" data-lightbox="gallery" data-title="Betty Collins and Bill O'Byrne at Edgewood Avenue Christian Church"><img src="photos/Betty-Collins-10.webp" alt="Photo of Betty Collins and Bill O'Byrne at Edgewood Avenue Christian Church"></a>
-        <a href="photos/Betty-Collins-11.webp" data-lightbox="gallery" data-title="Betty Collins and Bill O'Byrne at Edgewood Avenue Christian Church"><img src="photos/Betty-Collins-11.webp" alt="Photo of Betty Collins and Bill O'Byrne at Edgewood Avenue Christian Church"></a>
-        <a href="photos/Betty-Collins-12.webp" data-lightbox="gallery" data-title="Betty Collins, Anna Watts, Bill O'Byrne and others at Edgewood Avenue Christian Church"><img src="photos/Betty-Collins-12.webp" alt="Photo of Betty Collins, Anna Watts, Bill O'Byrne and others at Edgewood Avenue Christian Church"></a>
-        <a href="photos/Betty-Collins-13.webp" data-lightbox="gallery" data-title="Betty Collins and others at Edgewood Avenue Christian Church"><img src="photos/Betty-Collins-13.webp" alt="Photo of Betty Collins and others at Edgewood Avenue Christian Church"></a>
-        <a href="photos/Betty-Collins-14.webp" data-lightbox="gallery" data-title="Betty Collins and Katheryne Thomas at Edgewood Avenue Christian Church"><img src="photos/Betty-Collins-14.webp" alt="Photo of Betty Collins and Katheryne Thomas at Edgewood Avenue Christian Church"></a>
-        <a href="photos/Betty-Collins-15.webp" data-lightbox="gallery" data-title="Betty Collins and Jennette Fulmer at Edgewood Avenue Christian Church"><img src="photos/Betty-Collins-15.webp" alt="Photo of Betty Collins and Jennette Fulmer at Edgewood Avenue Christian Church"></a>
-        <a href="photos/Betty-Collins-16.webp" data-lightbox="gallery" data-title="Betty Collins and Bill O'Byrne at Edgewood Avenue Christian Church"><img src="photos/Betty-Collins-16.webp" alt="Photo of Betty Collins and Bill O'Byrne at Edgewood Avenue Christian Church"></a>
-        <a href="photos/Betty-Collins-17.webp" data-lightbox="gallery" data-title="Tina Christian, Betty Collins and Linda Alvarado at Edgewood Avenue Christian Church"><img src="photos/Betty-Collins-17.webp" alt="Photo of Tina Christian, Betty Collins and Linda Alvarado at Edgewood Avenue Christian Church"></a>
-        <a href="photos/Betty-Collins-18.webp" data-lightbox="gallery" data-title="Joseph Berlin, Connie Connell Wasmund, Bert Wasmund, Frank C Watts and Betty Collins at Edgewood Avenue Christian Church"><img src="photos/Betty-Collins-18.webp" alt="Photo 18"></a>
-        <a href="photos/Betty-Collins-19.webp" data-lightbox="gallery" data-title="Frank C Watts, Betty Collins and Nancy Moore at Edgewood Avenue Christian Church"><img src="photos/Betty-Collins-19.webp" alt="Frank C Watts, Betty Collins and Nancy Moore at Edgewood Avenue Christian Church"></a>
-        <a href="photos/Betty-Collins-20.webp" data-lightbox="gallery" data-title="Betty Collins, Hal Allen and others at Edgewood Avenue Christian Church"><img src="photos/Betty-Collins-20.webp" alt="Photo of Betty Collins, Hal Allen and others at Edgewood Avenue Christian Church"></a>
-      </div>
+    <div class="photo-collage">
+      <a href="photos/Betty-Collins-08.webp" data-lightbox="gallery"
+        data-title="Bill O'Bryne, Betty Collins, Linda Alvarado at Edgewood Avenue Christian Church"><img
+          src="photos/Betty-Collins-08.webp"
+          alt="Photo of Bill O'Bryne, Betty Collins, Linda Alvarado at Edgewood Avenue Christian Church"></a>
+      <a href="photos/Betty-Collins-09.webp" data-lightbox="gallery"
+        data-title="David Christian, Tina Christian, Bill O'Bryne and Betty Collins at Edgewood Avenue Christian Church"><img
+          src="photos/Betty-Collins-09.webp"
+          alt="Photo of David Christian, Tina Christian, Bill O'Bryne and Betty Collins at Edgewood Avenue Christian Church"></a>
+      <a href="photos/Betty-Collins-10.webp" data-lightbox="gallery"
+        data-title="Betty Collins and Bill O'Byrne at Edgewood Avenue Christian Church"><img
+          src="photos/Betty-Collins-10.webp"
+          alt="Photo of Betty Collins and Bill O'Byrne at Edgewood Avenue Christian Church"></a>
+      <a href="photos/Betty-Collins-11.webp" data-lightbox="gallery"
+        data-title="Betty Collins and Bill O'Byrne at Edgewood Avenue Christian Church"><img
+          src="photos/Betty-Collins-11.webp"
+          alt="Photo of Betty Collins and Bill O'Byrne at Edgewood Avenue Christian Church"></a>
+      <a href="photos/Betty-Collins-12.webp" data-lightbox="gallery"
+        data-title="Betty Collins, Anna Watts, Bill O'Byrne and others at Edgewood Avenue Christian Church"><img
+          src="photos/Betty-Collins-12.webp"
+          alt="Photo of Betty Collins, Anna Watts, Bill O'Byrne and others at Edgewood Avenue Christian Church"></a>
+      <a href="photos/Betty-Collins-13.webp" data-lightbox="gallery"
+        data-title="Betty Collins and others at Edgewood Avenue Christian Church"><img
+          src="photos/Betty-Collins-13.webp"
+          alt="Photo of Betty Collins and others at Edgewood Avenue Christian Church"></a>
+      <a href="photos/Betty-Collins-14.webp" data-lightbox="gallery"
+        data-title="Betty Collins and Katheryne Thomas at Edgewood Avenue Christian Church"><img
+          src="photos/Betty-Collins-14.webp"
+          alt="Photo of Betty Collins and Katheryne Thomas at Edgewood Avenue Christian Church"></a>
+      <a href="photos/Betty-Collins-15.webp" data-lightbox="gallery"
+        data-title="Betty Collins and Jennette Fulmer at Edgewood Avenue Christian Church"><img
+          src="photos/Betty-Collins-15.webp"
+          alt="Photo of Betty Collins and Jennette Fulmer at Edgewood Avenue Christian Church"></a>
+      <a href="photos/Betty-Collins-16.webp" data-lightbox="gallery"
+        data-title="Betty Collins and Bill O'Byrne at Edgewood Avenue Christian Church"><img
+          src="photos/Betty-Collins-16.webp"
+          alt="Photo of Betty Collins and Bill O'Byrne at Edgewood Avenue Christian Church"></a>
+      <a href="photos/Betty-Collins-17.webp" data-lightbox="gallery"
+        data-title="Tina Christian, Betty Collins and Linda Alvarado at Edgewood Avenue Christian Church"><img
+          src="photos/Betty-Collins-17.webp"
+          alt="Photo of Tina Christian, Betty Collins and Linda Alvarado at Edgewood Avenue Christian Church"></a>
+      <a href="photos/Betty-Collins-18.webp" data-lightbox="gallery"
+        data-title="Joseph Berlin, Connie Connell Wasmund, Bert Wasmund, Frank C Watts and Betty Collins at Edgewood Avenue Christian Church"><img
+          src="photos/Betty-Collins-18.webp" alt="Photo 18"></a>
+      <a href="photos/Betty-Collins-19.webp" data-lightbox="gallery"
+        data-title="Frank C Watts, Betty Collins and Nancy Moore at Edgewood Avenue Christian Church"><img
+          src="photos/Betty-Collins-19.webp"
+          alt="Frank C Watts, Betty Collins and Nancy Moore at Edgewood Avenue Christian Church"></a>
+      <a href="photos/Betty-Collins-20.webp" data-lightbox="gallery"
+        data-title="Betty Collins, Hal Allen and others at Edgewood Avenue Christian Church"><img
+          src="photos/Betty-Collins-20.webp"
+          alt="Photo of Betty Collins, Hal Allen and others at Edgewood Avenue Christian Church"></a>
+    </div>
 
     <p>Betty met Bill O'Byrne, the sunset love of her life, at the Florida Edgewood Condominiums, where their love story
       began with daily walks to the St. Johns River. Bill noticed Betty's unsteadiness and offered his hand, a simple
@@ -187,10 +227,11 @@
   </div>
   <script>
     lightbox.option({
+      'alwaysShowNavOnTouchDevices': true,
       'resizeDuration': 200,
       'wrapAround': true
     })
-    
+
     function setShareLinks() {
       const pageTitle = encodeURIComponent(document.title);
       const pageURL = encodeURIComponent(window.location.href);
@@ -207,7 +248,54 @@
 
     setShareLinks();
   </script>
-
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const photos = document.querySelectorAll('.photo-collage a');
+      let lastMouseOverTime = new Date().getTime(); // Initialize with the current time
+      let interactive = false; // Flag to indicate if the user is interacting
+    
+      photos.forEach(photo => {
+        // Apply initial random transformation
+        const rotation = Math.random() * 30 - 15; // Random rotation between -15deg and 15deg
+        const collageWidth = document.querySelector('.photo-collage').offsetWidth;
+        const collageHeight = document.querySelector('.photo-collage').offsetHeight;
+        const xOffset = (collageWidth * 0.05) + Math.random() * (collageWidth * 0.9 - 200);
+        const yOffset = (collageHeight * 0.05) + Math.random() * (collageHeight * 0.9 - 200);
+        photo.style.transform = `translate(${xOffset}px, ${yOffset}px) rotate(${rotation}deg)`;
+        photo.style.transition = 'transform 0.5s ease, z-index 0s';
+    
+        photo.addEventListener('mouseover', () => {
+          lastMouseOverTime = new Date().getTime(); // Update the last mouseover time
+          interactive = true; // User is interacting
+          photo.style.zIndex = 10;
+          photo.style.transform += ' scale(1.25)'; // Enlarge photo
+        });
+    
+        photo.addEventListener('mouseout', () => {
+          interactive = false; // User stopped interacting
+          setTimeout(() => { // Allow for transition before resetting z-index
+            if (!interactive) photo.style.zIndex = '';
+          }, 500); // Match the transition duration
+          photo.style.transform = photo.style.transform.replace(' scale(1.25)', ' scale(1)'); // Reset scale
+        });
+      });
+    
+      function promoteRandomPhoto() {
+        if (new Date().getTime() - lastMouseOverTime >= 5000 && !interactive) { // 5 seconds of inactivity and no ongoing interaction
+          const randomIndex = Math.floor(Math.random() * photos.length);
+          const photo = photos[randomIndex];
+          photo.style.zIndex = 10; // Temporarily bring to front
+          photo.style.transform += ' scale(1.25)'; // Enlarge
+          setTimeout(() => {
+            photo.style.transform = photo.style.transform.replace(' scale(1.25)', ' scale(1)'); // Reset scale with transition
+            // Do not reset z-index here to keep it on top
+          }, 2000); // Begin scale down after 2 seconds
+        }
+      }
+    
+      setInterval(promoteRandomPhoto, 2000); // Attempt to promote a photo every 2 seconds
+    });
+    </script>
 
 </body>
 
