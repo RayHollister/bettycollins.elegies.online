@@ -17,20 +17,16 @@
       padding: 20px;
       line-height: 1.6;
     }
-
     .container {
       max-width: 800px;
       margin: auto;
     }
-
     h1 {
       text-align: center;
     }
-
     p {
       margin-bottom: 20px;
     }
-
     .share-btn {
       display: flex;
       align-items: center;
@@ -45,9 +41,25 @@
       border-radius: 5px;
       font-size: 16px;
     }
-
-    .share-btn i {
-      margin-right: 8px;
+    .photo-collage {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 20px; /* Adjust space between the collage and the next text */
+    }
+    .photo-collage a {
+      margin: 5px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transform: rotate(-2deg);
+      transition: transform 0.2s ease;
+    }
+    .photo-collage a:hover {
+      transform: rotate(2deg);
+    }
+    .photo-collage img {
+      width: 150px; /* Adjust based on your preference */
+      height: auto;
+      display: block;
     }
   </style>
 
@@ -119,6 +131,22 @@
     <p>A gifted conversationalist, Betty made friends wherever she went, particularly at the Edgewood Condominiums and
       Silver Treasures at Lane Ave.</p>
 
+      <div class="photo-collage">
+        <a href="photos/Betty-Collins-08.webp" data-lightbox="gallery" data-title="Bill O'Bryne, Betty Collins, Linda Alvarado at Edgewood Avenue Christian Church"><img src="photos/Betty-Collins-08.webp" alt="Photo of Bill O'Bryne, Betty Collins, Linda Alvarado at Edgewood Avenue Christian Church"></a>
+        <a href="photos/Betty-Collins-09.webp" data-lightbox="gallery" data-title="David Christian, Tina Christian, Bill O'Bryne and Betty Collins at Edgewood Avenue Christian Church"><img src="photos/Betty-Collins-09.webp" alt="Photo of David Christian, Tina Christian, Bill O'Bryne and Betty Collins at Edgewood Avenue Christian Church"></a>
+        <a href="photos/Betty-Collins-10.webp" data-lightbox="gallery" data-title="Betty Collins and Bill O'Byrne at Edgewood Avenue Christian Church"><img src="photos/Betty-Collins-10.webp" alt="Photo of Betty Collins and Bill O'Byrne at Edgewood Avenue Christian Church"></a>
+        <a href="photos/Betty-Collins-11.webp" data-lightbox="gallery" data-title="Betty Collins and Bill O'Byrne at Edgewood Avenue Christian Church"><img src="photos/Betty-Collins-11.webp" alt="Photo of Betty Collins and Bill O'Byrne at Edgewood Avenue Christian Church"></a>
+        <a href="photos/Betty-Collins-12.webp" data-lightbox="gallery" data-title="Betty Collins, Anna Watts, Bill O'Byrne and others at Edgewood Avenue Christian Church"><img src="photos/Betty-Collins-12.webp" alt="Photo of Betty Collins, Anna Watts, Bill O'Byrne and others at Edgewood Avenue Christian Church"></a>
+        <a href="photos/Betty-Collins-13.webp" data-lightbox="gallery" data-title="Betty Collins and others at Edgewood Avenue Christian Church"><img src="photos/Betty-Collins-13.webp" alt="Photo of Betty Collins and others at Edgewood Avenue Christian Church"></a>
+        <a href="photos/Betty-Collins-14.webp" data-lightbox="gallery" data-title="Betty Collins and Katheryne Thomas at Edgewood Avenue Christian Church"><img src="photos/Betty-Collins-14.webp" alt="Photo of Betty Collins and Katheryne Thomas at Edgewood Avenue Christian Church"></a>
+        <a href="photos/Betty-Collins-15.webp" data-lightbox="gallery" data-title="Betty Collins and Jennette Fulmer at Edgewood Avenue Christian Church"><img src="photos/Betty-Collins-15.webp" alt="Photo of Betty Collins and Jennette Fulmer at Edgewood Avenue Christian Church"></a>
+        <a href="photos/Betty-Collins-16.webp" data-lightbox="gallery" data-title="Betty Collins and Bill O'Byrne at Edgewood Avenue Christian Church"><img src="photos/Betty-Collins-16.webp" alt="Photo of Betty Collins and Bill O'Byrne at Edgewood Avenue Christian Church"></a>
+        <a href="photos/Betty-Collins-17.webp" data-lightbox="gallery" data-title="Tina Christian, Betty Collins and Linda Alvarado at Edgewood Avenue Christian Church"><img src="photos/Betty-Collins-17.webp" alt="Photo of Tina Christian, Betty Collins and Linda Alvarado at Edgewood Avenue Christian Church"></a>
+        <a href="photos/Betty-Collins-18.webp" data-lightbox="gallery" data-title="Joseph Berlin, Connie Connell Wasmund, Bert Wasmund, Frank C Watts and Betty Collins at Edgewood Avenue Christian Church"><img src="photos/Betty-Collins-18.webp" alt="Photo 18"></a>
+        <a href="photos/Betty-Collins-19.webp" data-lightbox="gallery" data-title="Frank C Watts, Betty Collins and Nancy Moore at Edgewood Avenue Christian Church"><img src="photos/Betty-Collins-19.webp" alt="Frank C Watts, Betty Collins and Nancy Moore at Edgewood Avenue Christian Church"></a>
+        <a href="photos/Betty-Collins-20.webp" data-lightbox="gallery" data-title="Betty Collins, Hal Allen and others at Edgewood Avenue Christian Church"><img src="photos/Betty-Collins-20.webp" alt="Photo of Betty Collins, Hal Allen and others at Edgewood Avenue Christian Church"></a>
+      </div>
+
     <p>Betty met Bill O'Byrne, the sunset love of her life, at the Florida Edgewood Condominiums, where their love story
       began with daily walks to the St. Johns River. Bill noticed Betty's unsteadiness and offered his hand, a simple
       act that marked the start of their companionship. Together, they delighted in feeding and naming the squirrels
@@ -157,8 +185,12 @@
           class="fa-solid fa-envelope pr2"></i> Share by Email</a>
     </div>
   </div>
-
   <script>
+    lightbox.option({
+      'resizeDuration': 200,
+      'wrapAround': true
+    })
+    
     function setShareLinks() {
       const pageTitle = encodeURIComponent(document.title);
       const pageURL = encodeURIComponent(window.location.href);
