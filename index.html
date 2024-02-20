@@ -282,82 +282,10 @@
 
     setShareLinks();
   </script>
-
-  <script>
-    // Tossed pile of photos script
-
-    document.addEventListener('DOMContentLoaded', function () {
-      const photos = document.querySelectorAll('.photo-collage a');
-      let lastMouseOverTime = new Date().getTime(); // Initialize with the current time
-      let autoPromotionActive = false; // Flag to control auto-promotion
-
-      // Function to reset all photos to their default state
-      function resetPhotos() {
-        photos.forEach(photo => {
-          photo.style.zIndex = '';
-          photo.style.transform = photo.style.transform.replace(' scale(1.25)', ''); // Ensure scale is reset if it was enlarged
-        });
-      }
-
-      photos.forEach((photo, index) => {
-        // Apply initial random transformation
-        const collageWidth = document.querySelector('.photo-collage').offsetWidth;
-        const collageHeight = document.querySelector('.photo-collage').offsetHeight;
-        const rotation = Math.random() * 30 - 15; // Random rotation between -15deg and 15deg
-        const xOffset = (collageWidth * 0.05) + Math.random() * (collageWidth * 0.9 - 200);
-        const yOffset = (collageHeight * 0.05) + Math.random() * (collageHeight * 0.9 - 200);
-        photo.style.transform = `translate(${xOffset}px, ${yOffset}px) rotate(${rotation}deg) scale(1)`;
-        photo.style.transition = 'transform 0.5s ease, z-index 0s';
-
-        // Mouseover event to scale the photo up and bring it to the front
-        photo.addEventListener('mouseover', () => {
-          lastMouseOverTime = new Date().getTime(); // Update the last mouseover time
-          resetPhotos(); // Reset other photos to ensure only this one is on top
-          photo.style.zIndex = 10;
-          photo.style.transform = `translate(${xOffset}px, ${yOffset}px) rotate(${rotation}deg) scale(1.25)`; // Enlarge photo
-          autoPromotionActive = false; // Disable auto-promotion while interacting
-        });
-
-        // Mouseout event to reset the photo's scale
-        photo.addEventListener('mouseout', () => {
-          photo.style.transform = `translate(${xOffset}px, ${yOffset}px) rotate(${rotation}deg) scale(1)`; // Reset scale
-          // Delay resetting z-index to allow for other interactions
-          setTimeout(() => {
-            if (!autoPromotionActive) {
-              photo.style.zIndex = '';
-            }
-          }, 500);
-        });
-      });
-
-      // Function to promote a random photo
-      function promoteRandomPhoto() {
-        if (new Date().getTime() - lastMouseOverTime >= 4000) { // 4 seconds of inactivity
-          resetPhotos(); // Reset before choosing a photo to promote
-          const randomIndex = Math.floor(Math.random() * photos.length);
-          const photo = photos[randomIndex];
-          const collageWidth = document.querySelector('.photo-collage').offsetWidth;
-          const collageHeight = document.querySelector('.photo-collage').offsetHeight;
-          const rotation = Math.random() * 30 - 15; // Ensure rotation is considered in transform
-          const xOffset = (collageWidth * 0.05) + Math.random() * (collageWidth * 0.9 - 200);
-          const yOffset = (collageHeight * 0.05) + Math.random() * (collageHeight - 150);
-          photo.style.zIndex = 10; // Bring to front
-          photo.style.transform = `translate(${xOffset}px, ${yOffset}px) rotate(${rotation}deg) scale(1.4)`; // Enlarge
-          autoPromotionActive = true; // Indicate that auto-promotion is active
-          setTimeout(() => {
-            photo.style.transform = `translate(${xOffset}px, ${yOffset}px) rotate(${rotation}deg) scale(1)`; // Reset scale after promotion
-            // Keep z-index elevated to maintain visibility
-          }, 3000); // Keep promoted for 2 seconds before scaling down
-        }
-      }
-
-      setInterval(promoteRandomPhoto, 3000); // Attempt to promote a photo every 3 seconds
-    });
-  </script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       // Select all img elements not inside .photo-collage
-      const outsidePhotos = document.querySelectorAll('img:not(.photo-collage img)');
+      const outsidePhotos = document.querySelectorAll('img');
 
       outsidePhotos.forEach(photo => {
         photo.style.transition = 'transform 0.5s ease'; // Set transition for smooth scaling
