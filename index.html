@@ -7,9 +7,8 @@
   <title>Betty Collins Memorial</title>
   <link href="https://unpkg.com/tachyons/css/tachyons.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
-  <script type="text/javascript" src="/lightbox2/dist/js/lightbox-plus-jquery.js"></script>
+  <link rel="stylesheet" href="/splide/css/themes/splide-default.min.css">
   <link rel="stylesheet" href="/lightbox2/src/css/lightbox.css" />
-  <!-- Font Awesome CDN for the Facebook Icon -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <style>
     body {
@@ -98,9 +97,8 @@
     <a href="photos/Betty-Collins-025.webp" data-lightbox="gallery"
       data-alt="Betty Collins and Bill O'Byrne sitting on the couch holding hands"
       data-title="Betty Collins and Bill O'Byrne sitting on the couch holding hands">
-      <img src="photos/Betty-Collins.webp"
-        alt="Betty Collins and Bill O'Byrne sitting on the couch holding hands" class="db center mb4"
-        style="max-width: 100%; height: auto;">
+      <img src="photos/Betty-Collins.webp" alt="Betty Collins and Bill O'Byrne sitting on the couch holding hands"
+        class="db center mb4" style="max-width: 100%; height: auto;">
     </a>
 
     <p>Betty Collins passed away peacefully on February 9, 2024, in Jacksonville, Florida, just
@@ -148,58 +146,90 @@
     <p>A gifted conversationalist, Betty made friends wherever she went, particularly at the Edgewood Condominiums and
       Silver Treasures at Lane Ave.</p>
 
-    <div class="photo-collage">
-      <a href="photos/Betty-Collins-009.webp" data-lightbox="gallery"
-        data-title="Bill O'Bryne, Betty Collins, Linda Alvarado at Edgewood Avenue Christian Church"><img
-          src="photos/Betty-Collins-009.webp"
-          alt="Photo of Bill O'Bryne, Betty Collins, Linda Alvarado at Edgewood Avenue Christian Church"></a>
-      <a href="photos/Betty-Collins-010.webp" data-lightbox="gallery"
-        data-title="David Christian, Tina Christian, Bill O'Bryne and Betty Collins at Edgewood Avenue Christian Church"><img
-          src="photos/Betty-Collins-010.webp"
-          alt="Photo of David Christian, Tina Christian, Bill O'Bryne and Betty Collins at Edgewood Avenue Christian Church"></a>
-      <a href="photos/Betty-Collins-011.webp" data-lightbox="gallery"
-        data-title="Betty Collins and Bill O'Byrne at Edgewood Avenue Christian Church"><img
-          src="photos/Betty-Collins-011.webp"
-          alt="Photo of Betty Collins and Bill O'Byrne at Edgewood Avenue Christian Church"></a>
-      <a href="photos/Betty-Collins-012.webp" data-lightbox="gallery"
-        data-title="Betty Collins and Bill O'Byrne at Edgewood Avenue Christian Church"><img
-          src="photos/Betty-Collins-012.webp"
-          alt="Photo of Betty Collins and Bill O'Byrne at Edgewood Avenue Christian Church"></a>
-      <a href="photos/Betty-Collins-013.webp" data-lightbox="gallery"
-        data-title="Betty Collins, Anna Watts, Bill O'Byrne and others at Edgewood Avenue Christian Church"><img
-          src="photos/Betty-Collins-013.webp"
-          alt="Photo of Betty Collins, Anna Watts, Bill O'Byrne and others at Edgewood Avenue Christian Church"></a>
-      <a href="photos/Betty-Collins-014.webp" data-lightbox="gallery"
-        data-title="Betty Collins and others at Edgewood Avenue Christian Church"><img
-          src="photos/Betty-Collins-014.webp"
-          alt="Photo of Betty Collins and others at Edgewood Avenue Christian Church"></a>
-      <a href="photos/Betty-Collins-015.webp" data-lightbox="gallery"
-        data-title="Betty Collins and Katheryne Thomas at Edgewood Avenue Christian Church"><img
-          src="photos/Betty-Collins-015.webp"
-          alt="Photo of Betty Collins and Katheryne Thomas at Edgewood Avenue Christian Church"></a>
-      <a href="photos/Betty-Collins-016.webp" data-lightbox="gallery"
-        data-title="Betty Collins and Jennette Fulmer at Edgewood Avenue Christian Church"><img
-          src="photos/Betty-Collins-016.webp"
-          alt="Photo of Betty Collins and Jennette Fulmer at Edgewood Avenue Christian Church"></a>
-      <a href="photos/Betty-Collins-017.webp" data-lightbox="gallery"
-        data-title="Betty Collins and Bill O'Byrne at Edgewood Avenue Christian Church"><img
-          src="photos/Betty-Collins-017.webp"
-          alt="Photo of Betty Collins and Bill O'Byrne at Edgewood Avenue Christian Church"></a>
-      <a href="photos/Betty-Collins-018.webp" data-lightbox="gallery"
-        data-title="Tina Christian, Betty Collins and Linda Alvarado at Edgewood Avenue Christian Church"><img
-          src="photos/Betty-Collins-018.webp"
-          alt="Photo of Tina Christian, Betty Collins and Linda Alvarado at Edgewood Avenue Christian Church"></a>
-      <a href="photos/Betty-Collins-019.webp" data-lightbox="gallery"
-        data-title="Joseph Berlin, Connie Connell Wasmund, Bert Wasmund, Frank C Watts and Betty Collins at Edgewood Avenue Christian Church"><img
-          src="photos/Betty-Collins-019.webp" alt="Photo 18"></a>
-      <a href="photos/Betty-Collins-020.webp" data-lightbox="gallery"
-        data-title="Frank C Watts, Betty Collins and Nancy Moore at Edgewood Avenue Christian Church"><img
-          src="photos/Betty-Collins-020.webp"
-          alt="Frank C Watts, Betty Collins and Nancy Moore at Edgewood Avenue Christian Church"></a>
-      <a href="photos/Betty-Collins-021.webp" data-lightbox="gallery"
-        data-title="Betty Collins, Hal Allen and others at Edgewood Avenue Christian Church"><img
-          src="photos/Betty-Collins-021.webp"
-          alt="Photo of Betty Collins, Hal Allen and others at Edgewood Avenue Christian Church"></a>
+    <!-- Gallery setup -->
+    <div id="image-slider" class="splide" aria-label="Photo Gallery">
+      <div class="splide__track">
+        <ul class="splide__list">
+          <!-- List your images here -->
+          <li class="splide__slide">
+            <a href="photos/Betty-Collins-009.webp" data-lightbox="gallery"
+              data-title="Bill O'Bryne, Betty Collins, Linda Alvarado at Edgewood Avenue Christian Church"><img
+                src="photos/Betty-Collins-009.webp"
+                alt="Photo of Bill O'Bryne, Betty Collins, Linda Alvarado at Edgewood Avenue Christian Church"></a>
+          </li>
+          <li class="splide__slide">
+            <a href="photos/Betty-Collins-010.webp" data-lightbox="gallery"
+              data-title="David Christian, Tina Christian, Bill O'Bryne and Betty Collins at Edgewood Avenue Christian Church"><img
+                src="photos/Betty-Collins-010.webp"
+                alt="Photo of David Christian, Tina Christian, Bill O'Bryne and Betty Collins at Edgewood Avenue Christian Church"></a>
+          </li>
+          <li class="splide__slide">
+            <a href="photos/Betty-Collins-011.webp" data-lightbox="gallery"
+              data-title="Betty Collins and Bill O'Byrne at Edgewood Avenue Christian Church"><img
+                src="photos/Betty-Collins-011.webp"
+                alt="Photo of Betty Collins and Bill O'Byrne at Edgewood Avenue Christian Church"></a>
+          </li>
+          <li class="splide__slide">
+            <a href="photos/Betty-Collins-012.webp" data-lightbox="gallery"
+              data-title="Betty Collins and Bill O'Byrne at Edgewood Avenue Christian Church"><img
+                src="photos/Betty-Collins-012.webp"
+                alt="Photo of Betty Collins and Bill O'Byrne at Edgewood Avenue Christian Church"></a>
+          </li>
+          <li class="splide__slide">
+            <a href="photos/Betty-Collins-013.webp" data-lightbox="gallery"
+              data-title="Betty Collins, Anna Watts, Bill O'Byrne and others at Edgewood Avenue Christian Church"><img
+                src="photos/Betty-Collins-013.webp"
+                alt="Photo of Betty Collins, Anna Watts, Bill O'Byrne and others at Edgewood Avenue Christian Church"></a>
+          </li>
+          <li class="splide__slide">
+            <a href="photos/Betty-Collins-014.webp" data-lightbox="gallery"
+              data-title="Betty Collins and others at Edgewood Avenue Christian Church"><img
+                src="photos/Betty-Collins-014.webp"
+                alt="Photo of Betty Collins and others at Edgewood Avenue Christian Church"></a>
+          </li>
+          <li class="splide__slide">
+            <a href="photos/Betty-Collins-015.webp" data-lightbox="gallery"
+              data-title="Betty Collins and Katheryne Thomas at Edgewood Avenue Christian Church"><img
+                src="photos/Betty-Collins-015.webp"
+                alt="Photo of Betty Collins and Katheryne Thomas at Edgewood Avenue Christian Church"></a>
+          </li>
+          <li class="splide__slide">
+            <a href="photos/Betty-Collins-016.webp" data-lightbox="gallery"
+              data-title="Betty Collins and Jennette Fulmer at Edgewood Avenue Christian Church"><img
+                src="photos/Betty-Collins-016.webp"
+                alt="Photo of Betty Collins and Jennette Fulmer at Edgewood Avenue Christian Church"></a>
+          </li>
+          <li class="splide__slide">
+            <a href="photos/Betty-Collins-017.webp" data-lightbox="gallery"
+              data-title="Betty Collins and Bill O'Byrne at Edgewood Avenue Christian Church"><img
+                src="photos/Betty-Collins-017.webp"
+                alt="Photo of Betty Collins and Bill O'Byrne at Edgewood Avenue Christian Church"></a>
+          </li>
+          <li class="splide__slide">
+            <a href="photos/Betty-Collins-018.webp" data-lightbox="gallery"
+              data-title="Tina Christian, Betty Collins and Linda Alvarado at Edgewood Avenue Christian Church"><img
+                src="photos/Betty-Collins-018.webp"
+                alt="Photo of Tina Christian, Betty Collins and Linda Alvarado at Edgewood Avenue Christian Church"></a>
+          </li>
+          <li class="splide__slide">
+            <a href="photos/Betty-Collins-019.webp" data-lightbox="gallery"
+              data-title="Joseph Berlin, Connie Connell Wasmund, Bert Wasmund, Frank C Watts and Betty Collins at Edgewood Avenue Christian Church"><img
+                src="photos/Betty-Collins-019.webp" alt="Photo 18"></a>
+          </li>
+          <li class="splide__slide">
+            <a href="photos/Betty-Collins-020.webp" data-lightbox="gallery"
+              data-title="Frank C Watts, Betty Collins and Nancy Moore at Edgewood Avenue Christian Church"><img
+                src="photos/Betty-Collins-020.webp"
+                alt="Frank C Watts, Betty Collins and Nancy Moore at Edgewood Avenue Christian Church"></a>
+          </li>
+          <li class="splide__slide">
+            <a href="photos/Betty-Collins-021.webp" data-lightbox="gallery"
+              data-title="Betty Collins, Hal Allen and others at Edgewood Avenue Christian Church"><img
+                src="photos/Betty-Collins-021.webp"
+                alt="Photo of Betty Collins, Hal Allen and others at Edgewood Avenue Christian Church"></a>
+          </li>
+        </ul>
+      </div>
     </div>
 
     <p>Betty met Bill O'Byrne, the sunset love of her life, at the Florida Edgewood Condominiums, where their love story
@@ -300,8 +330,39 @@
       });
     });
   </script>
+  <!-- Splide and Lightbox scripts -->
   <script src="/splide/js/splide.min.js"></script>
   <script src="/splide-autoscroll/js/splide-extension-auto-scroll.min.js"></script>
+  <script src="/lightbox2/dist/js/lightbox-plus-jquery.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Initialize Splide with AutoScroll extension
+      const splide = new Splide('.splide', {
+        lazyLoad: 'nearby',
+        type: 'loop',
+        drag: 'free',
+        focus: 'center',
+        // width: '1200px',
+        perPage: 2,
+        gap: '1rem',
+        // arrows: false,
+        autoScroll: {
+          speed: 1,
+        },
+        breakpoints: {
+          960: {
+            gap: '.5rem',
+            perPage: 1,
+          },
+          480: {
+            perPage: 1,
+            arrows: false,
+          },
+        },
+      }).mount(window.splide.Extensions);
+      
+    });
+  </script>
 </body>
 
 </html>
